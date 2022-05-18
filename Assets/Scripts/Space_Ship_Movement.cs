@@ -26,6 +26,6 @@ public class Space_Ship_Movement : MonoBehaviour
 
         transform.Translate(xMovement, yMovement, 0);
 
-        // Debug.Log("You Are Moving");
+        Debug.Log("Instructions: Left Click To Shoot");
     }
 }

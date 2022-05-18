@@ -18,17 +18,19 @@ public class Enemy : MonoBehaviour
     private void Start()
     {
         health = maxHealth;
+       
     }
 
     public void TakeDamage(float damageAmount)
     {
 
-
         health -= damageAmount;
 
+        
         if (health <= 0)
 
             Destroy(gameObject);
+        
     }
 
 }

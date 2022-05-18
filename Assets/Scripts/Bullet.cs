@@ -18,10 +18,11 @@ THESE YOUTUBE VIDEOS HELPED ME A LOT:
 {
     public GameObject hitEffect;
 
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
         
+
         /*
         CODE FROM THE FIRST YOUTUBE VIDEO
 
@@ -29,9 +30,14 @@ THESE YOUTUBE VIDEOS HELPED ME A LOT:
         Destroy(effect, 5f);
         */
 
+        
         Destroy(gameObject);
         if (collision.gameObject.TryGetComponent<Enemy>(out Enemy enemyComponent));
+
+        
+
         {
+
             enemyComponent.TakeDamage(3);
         }
         
