@@ -15,12 +15,17 @@ public class Enemies_Spawning : MonoBehaviour
     Vector2 wheretoSpawn;
     public float spawnRate = 0f;
     float nextSpawn = 0.0f;
+    
+    
+    
 
     
+
 
     // Start is called before the first frame update
     void Start()
     {
+
         
     }
 
@@ -37,11 +42,13 @@ public class Enemies_Spawning : MonoBehaviour
             randX = Random.Range(-8.4f, 8.4f);
             wheretoSpawn = new Vector2(randX, transform.position.y);
             Instantiate(enemy, wheretoSpawn, Quaternion.identity);
-            
+           
         }
 
 
     }
+
+    
 }
 
 

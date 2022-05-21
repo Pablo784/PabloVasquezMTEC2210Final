@@ -23,19 +23,27 @@ public class Shooting : MonoBehaviour
     
         if (Input.GetButtonDown("Fire1"))
         {
+            
             Shoot();
+
+            Score.scoreValue += 2; // THIS LINE OF CODE GIVES THE PLAYER THEIR SCORE
 
         }
 
         void Shoot()
         {
-           
+          
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
 
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
 
             rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+           
+
+
         }
+
+        Debug.Log("KILL THE ENEMY WITH THE LEFT CLICK OF YOUR MOUSE!");
     }
 
 }
